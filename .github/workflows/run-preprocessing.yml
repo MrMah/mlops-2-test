@@ -6,6 +6,7 @@ on:
   push:
     branches:    
     - 'main'
+    - 'test-branch'
     paths:
       - 'data/raw/**.csv'
   workflow_dispatch:
@@ -42,5 +43,11 @@ jobs:
           timestamp=$(date -u)
           git commit -m "Update preprocessed data: ${timestamp}" || exit 0
           git push
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-step
+        run: echo "Hello, this is a test"
+      
 
   
