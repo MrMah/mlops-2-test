@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print-step
-        run: cat "Hello, this is a test"
+        run: echo "Hello, this is a test"
       
 
   
